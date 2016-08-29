@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @content.title %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @content.url %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @content.summary %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @content.body %>
+</p>
+
+<p>
+  <strong>Keyword:</strong>
+  <%= @content.keyword %>
+</p>
+
+<p>
+  <strong>Trend:</strong>
+  <%= @content.trend %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @content.time %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @content.author %>
+</p>
+
+<%= link_to 'Edit', edit_content_path(@content) %> |
+<%= link_to 'Back', contents_path %>

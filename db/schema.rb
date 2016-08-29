@@ -10,6 +10,61 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160829071603) do
+
+  create_table "Contents_Relationships", id: false, force: :cascade do |t|
+    t.integer "content_id",      null: false
+    t.integer "relationship_id", null: false
+  end
+
+  create_table "contents", force: :cascade do |t|
+    t.string   "title"
+    t.string   "url"
+    t.text     "summary"
+    t.text     "body"
+    t.string   "keyword"
+    t.string   "trend"
+    t.datetime "time"
+    t.string   "author"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "news", force: :cascade do |t|
+    t.string   "title"
+    t.string   "url"
+    t.string   "summary"
+    t.string   "body"
+    t.string   "keyword"
+    t.string   "trend"
+    t.date     "time"
+    t.string   "author"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "relationships", force: :cascade do |t|
+    t.string   "a"
+    t.string   "b"
+    t.float    "score"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "username"
+    t.string   "password"
+    t.string   "salt"
+    t.string   "email"
+    t.string   "keyword"
+    t.string   "trend"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

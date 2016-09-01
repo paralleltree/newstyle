@@ -1,4 +1,4 @@
 class IndexController < ApplicationController
-  def show
+  def view
   end
 end

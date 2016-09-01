@@ -20,6 +20,7 @@ class ContentsController < ApplicationController
   # GET /contents/1/edit
   def edit
   end
+  
 
   # POST /contents
   # POST /contents.json

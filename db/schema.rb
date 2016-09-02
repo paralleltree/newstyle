@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160901075633) do
 
   create_table "contents", force: :cascade do |t|
@@ -25,5 +26,32 @@ ActiveRecord::Schema.define(version: 20160901075633) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+=======
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 0) do
+=======
+ActiveRecord::Schema.define(version: 20160901122056) do
+
+  create_table "contents", force: :cascade do |t|
+    t.string   "title"
+    t.string   "url"
+    t.text     "summary"
+    t.text     "body"
+    t.string   "trend"
+    t.datetime "time"
+    t.string   "author"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "relationships", force: :cascade do |t|
+    t.integer  "a_id"
+    t.integer  "b_id"
+    t.float    "score"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+>>>>>>> 9006c4ea0aaa405d924330f74a2170c18723ece7
+>>>>>>> 8b90bb1d5b15edd7e4fb1e1d8785c142fcb30872
 
 end

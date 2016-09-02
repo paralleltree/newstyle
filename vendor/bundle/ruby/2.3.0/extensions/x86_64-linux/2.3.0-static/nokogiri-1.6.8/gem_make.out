@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 current directory: /home/procon04/work/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ext/nokogiri
 /home/procon04/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20160901-27565-154lber.rb extconf.rb
+=======
+current directory: /home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ext/nokogiri
+/home/procon/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20160901-29918-1dvmttt.rb extconf.rb
+>>>>>>> 8b90bb1d5b15edd7e4fb1e1d8785c142fcb30872
 Using pkg-config version 1.1.7
 checking if the C compiler accepts ... yes
 Building nokogiri using packaged libraries.
@@ -32,7 +37,11 @@ Extracting libxml2-2.9.4.tar.gz into tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.4
 Running 'configure' for libxml2 2.9.4... OK
 Running 'compile' for libxml2 2.9.4... OK
 Running 'install' for libxml2 2.9.4... OK
+<<<<<<< HEAD
 Activating libxml2 2.9.4 (from /home/procon04/work/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxml2/2.9.4)...
+=======
+Activating libxml2 2.9.4 (from /home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxml2/2.9.4)...
+>>>>>>> 8b90bb1d5b15edd7e4fb1e1d8785c142fcb30872
 ************************************************************************
 IMPORTANT NOTICE:
 
@@ -56,7 +65,11 @@ Extracting libxslt-1.1.29.tar.gz into tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.
 Running 'configure' for libxslt 1.1.29... OK
 Running 'compile' for libxslt 1.1.29... OK
 Running 'install' for libxslt 1.1.29... OK
+<<<<<<< HEAD
 Activating libxslt 1.1.29 (from /home/procon04/work/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxslt/1.1.29)...
+=======
+Activating libxslt 1.1.29 (from /home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxslt/1.1.29)...
+>>>>>>> 8b90bb1d5b15edd7e4fb1e1d8785c142fcb30872
 checking for main() in -llzma... no
 checking for xmlParseDoc() in libxml/parser.h... yes
 checking for xsltParseStylesheetDoc() in libxslt/xslt.h... yes
@@ -72,6 +85,7 @@ creating Makefile
 
 To see why this extension failed to compile, please check the mkmf.log which can be found here:
 
+<<<<<<< HEAD
   /home/procon04/work/newstyle/vendor/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0-static/nokogiri-1.6.8/mkmf.log
 
 current directory: /home/procon04/work/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ext/nokogiri
@@ -86,6 +100,44 @@ xml_sax_parser.c:28:7: warning: ISO C90 forbids mixed declarations and code [-Wd
        ^
 compiling xml_attr.c
 compiling xml_entity_reference.c
+=======
+  /home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0-static/nokogiri-1.6.8/mkmf.log
+
+current directory: /home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ext/nokogiri
+make "DESTDIR=" clean
+
+current directory: /home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ext/nokogiri
+make "DESTDIR="
+compiling xml_schema.c
+compiling html_document.c
+compiling xml_reader.c
+compiling xml_processing_instruction.c
+compiling xml_document.c
+xml_document.c: In function ‘set_encoding’:
+xml_document.c:182:12: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+       free((char *) doc->encoding); /* this may produce a gcc cast warning */
+            ^
+xml_document.c: In function ‘canonicalize’:
+xml_document.c:535:15: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+       ns[i] = (xmlChar*) ptr;
+               ^
+compiling xml_namespace.c
+xml_namespace.c: In function ‘dealloc_namespace’:
+xml_namespace.c:17:13: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+     xmlFree((xmlChar *)ns->href);
+             ^
+xml_namespace.c:20:13: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+     xmlFree((xmlChar *)ns->prefix);
+             ^
+xml_namespace.c: In function ‘part_of_an_xpath_node_set_eh’:
+xml_namespace.c:67:49: warning: passing argument 1 of ‘Nokogiri_namespace_eh’ from incompatible pointer type [-Wincompatible-pointer-types]
+   return (node->next && ! Nokogiri_namespace_eh(node->next));
+                                                 ^
+xml_namespace.c:27:5: note: expected ‘xmlNodePtr {aka struct _xmlNode *}’ but argument is of type ‘struct _xmlNs *’
+ int Nokogiri_namespace_eh(xmlNodePtr node)
+     ^
+compiling xml_cdata.c
+>>>>>>> 8b90bb1d5b15edd7e4fb1e1d8785c142fcb30872
 compiling xml_node.c
 xml_node.c: In function ‘reparent_node_with’:
 xml_node.c:170:7: warning: enumeration value ‘XML_ATTRIBUTE_NODE’ not handled in switch [-Wswitch]
@@ -158,6 +210,7 @@ xml_node.c:167:5: warning: enumeration value ‘XML_NAMESPACE_DECL’ not handle
 xml_node.c:167:5: warning: enumeration value ‘XML_XINCLUDE_START’ not handled in switch [-Wswitch]
 xml_node.c:167:5: warning: enumeration value ‘XML_XINCLUDE_END’ not handled in switch [-Wswitch]
 xml_node.c:167:5: warning: enumeration value ‘XML_DOCB_DOCUMENT_NODE’ not handled in switch [-Wswitch]
+<<<<<<< HEAD
 compiling xml_namespace.c
 xml_namespace.c: In function ‘dealloc_namespace’:
 xml_namespace.c:17:13: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
@@ -181,6 +234,42 @@ compiling xml_text.c
 compiling xml_libxml2_hacks.c
 compiling xslt_stylesheet.c
 In file included from /home/procon04/.rbenv/versions/2.3.1/include/ruby-2.3.0/ruby.h:33:0,
+=======
+compiling xml_dtd.c
+compiling xml_sax_parser_context.c
+compiling xml_attr.c
+compiling xml_document_fragment.c
+compiling xml_sax_push_parser.c
+compiling xml_sax_parser.c
+xml_sax_parser.c: In function ‘start_document’:
+xml_sax_parser.c:28:7: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+       VALUE version = ctxt->version ? NOKOGIRI_STR_NEW2(ctxt->version) : Qnil;
+       ^
+compiling xml_encoding_handler.c
+compiling xml_text.c
+compiling xml_attribute_decl.c
+compiling html_element_description.c
+In file included from /home/procon/.rbenv/versions/2.3.1/include/ruby-2.3.0/ruby.h:33:0,
+                 from ./nokogiri.h:33,
+                 from ./html_element_description.h:4,
+                 from html_element_description.c:1:
+html_element_description.c: In function ‘get_description’:
+html_element_description.c:252:40: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+   return Data_Wrap_Struct(klass, 0, 0, (void *)description);
+                                        ^
+/home/procon/.rbenv/versions/2.3.1/include/ruby-2.3.0/ruby/ruby.h:1167:34: note: in definition of macro ‘Data_Wrap_Struct’
+     rb_data_object_wrap((klass),(sval),(RUBY_DATA_FUNC)(mark),(RUBY_DATA_FUNC)(free))
+                                  ^
+compiling xml_node_set.c
+compiling xml_element_content.c
+compiling xml_libxml2_hacks.c
+compiling xml_relax_ng.c
+compiling html_sax_parser_context.c
+compiling xml_comment.c
+compiling xml_element_decl.c
+compiling xslt_stylesheet.c
+In file included from /home/procon/.rbenv/versions/2.3.1/include/ruby-2.3.0/ruby.h:33:0,
+>>>>>>> 8b90bb1d5b15edd7e4fb1e1d8785c142fcb30872
                  from ./nokogiri.h:33,
                  from ./xslt_stylesheet.h:4,
                  from xslt_stylesheet.c:1:
@@ -188,16 +277,24 @@ xslt_stylesheet.c: In function ‘initFunc’:
 xslt_stylesheet.c:217:21: warning: passing argument 1 of ‘rb_data_object_get’ makes integer from pointer without a cast [-Wint-conversion]
      Data_Get_Struct(ctxt->style->_private, nokogiriXsltStylesheetTuple,
                      ^
+<<<<<<< HEAD
 /home/procon04/.rbenv/versions/2.3.1/include/ruby-2.3.0/ruby/ruby.h:1205:41: note: in definition of macro ‘Data_Get_Struct’
      ((sval) = (type*)rb_data_object_get(obj))
                                          ^
 /home/procon04/.rbenv/versions/2.3.1/include/ruby-2.3.0/ruby/ruby.h:1397:1: note: expected ‘VALUE {aka long unsigned int}’ but argument is of type ‘void *’
+=======
+/home/procon/.rbenv/versions/2.3.1/include/ruby-2.3.0/ruby/ruby.h:1205:41: note: in definition of macro ‘Data_Get_Struct’
+     ((sval) = (type*)rb_data_object_get(obj))
+                                         ^
+/home/procon/.rbenv/versions/2.3.1/include/ruby-2.3.0/ruby/ruby.h:1397:1: note: expected ‘VALUE {aka long unsigned int}’ but argument is of type ‘void *’
+>>>>>>> 8b90bb1d5b15edd7e4fb1e1d8785c142fcb30872
  rb_data_object_get(VALUE obj)
  ^
 xslt_stylesheet.c: In function ‘shutdownFunc’:
 xslt_stylesheet.c:230:21: warning: passing argument 1 of ‘rb_data_object_get’ makes integer from pointer without a cast [-Wint-conversion]
      Data_Get_Struct(ctxt->style->_private, nokogiriXsltStylesheetTuple,
                      ^
+<<<<<<< HEAD
 /home/procon04/.rbenv/versions/2.3.1/include/ruby-2.3.0/ruby/ruby.h:1205:41: note: in definition of macro ‘Data_Get_Struct’
      ((sval) = (type*)rb_data_object_get(obj))
                                          ^
@@ -254,3 +351,28 @@ rm -rf /home/procon04/work/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8
 current directory: /home/procon04/work/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ext/nokogiri
 make "DESTDIR=" install
 /usr/bin/install -c -m 0755 nokogiri.so ./.gem.20160901-27565-ing51q/nokogiri
+=======
+/home/procon/.rbenv/versions/2.3.1/include/ruby-2.3.0/ruby/ruby.h:1205:41: note: in definition of macro ‘Data_Get_Struct’
+     ((sval) = (type*)rb_data_object_get(obj))
+                                         ^
+/home/procon/.rbenv/versions/2.3.1/include/ruby-2.3.0/ruby/ruby.h:1397:1: note: expected ‘VALUE {aka long unsigned int}’ but argument is of type ‘void *’
+ rb_data_object_get(VALUE obj)
+ ^
+compiling xml_entity_reference.c
+compiling html_entity_lookup.c
+compiling nokogiri.c
+compiling xml_io.c
+compiling html_sax_push_parser.c
+compiling xml_entity_decl.c
+compiling xml_syntax_error.c
+compiling xml_xpath_context.c
+linking shared-object nokogiri/nokogiri.so
+Using pkg-config version 1.1.7
+Cleaning files only used during build.
+rm -rf /home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports
+rm -rf /home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports
+
+current directory: /home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ext/nokogiri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 nokogiri.so ./.gem.20160901-29918-1kxqm6/nokogiri
+>>>>>>> 8b90bb1d5b15edd7e4fb1e1d8785c142fcb30872

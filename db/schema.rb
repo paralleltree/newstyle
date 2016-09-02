@@ -14,13 +14,14 @@
 ActiveRecord::Schema.define(version: 20160901122056) do
 
   create_table "contents", force: :cascade do |t|
-    t.string   "title"
-    t.string   "url"
+    t.text     "title"
+    t.text     "url"
     t.text     "summary"
     t.text     "body"
-    t.string   "trend"
+    t.text     "keyword"
+    t.text     "trend"
     t.datetime "time"
-    t.string   "author"
+    t.text     "author"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

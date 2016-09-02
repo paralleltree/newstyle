@@ -12,12 +12,21 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
+<<<<<<< HEAD
+topdir = /home/procon04/.rbenv/versions/2.3.1/include/ruby-2.3.0
+hdrdir = $(topdir)
+arch_hdrdir = /home/procon04/.rbenv/versions/2.3.1/include/ruby-2.3.0/x86_64-linux
+PATH_SEPARATOR = :
+VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
+prefix = $(DESTDIR)/home/procon04/.rbenv/versions/2.3.1
+=======
 topdir = /home/procon/.rbenv/versions/2.3.1/include/ruby-2.3.0
 hdrdir = $(topdir)
 arch_hdrdir = /home/procon/.rbenv/versions/2.3.1/include/ruby-2.3.0/x86_64-linux
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
 prefix = $(DESTDIR)/home/procon/.rbenv/versions/2.3.1
+>>>>>>> 8b90bb1d5b15edd7e4fb1e1d8785c142fcb30872
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -31,8 +40,13 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
+<<<<<<< HEAD
+sitearchdir = $(DESTDIR)./.gem.20160901-27565-ing51q
+sitelibdir = $(DESTDIR)./.gem.20160901-27565-ing51q
+=======
 sitearchdir = $(DESTDIR)./.gem.20160901-29918-1kxqm6
 sitelibdir = $(DESTDIR)./.gem.20160901-29918-1kxqm6
+>>>>>>> 8b90bb1d5b15edd7e4fb1e1d8785c142fcb30872
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -83,9 +97,15 @@ CCDLFLAGS = -fPIC
 CFLAGS   = $(CCDLFLAGS) $(cflags)  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
+<<<<<<< HEAD
+CPPFLAGS = -DHAVE_XMLPARSEDOC -DHAVE_XSLTPARSESTYLESHEETDOC -DHAVE_EXSLTFUNCREGISTER -DHAVE_XMLHASFEATURE -DHAVE_XMLFIRSTELEMENTCHILD -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETPARSERSTRUCTUREDERRORS -I/home/procon04/work/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/include -I/home/procon04/work/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2 -I/home/procon04/work/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2 -I/home/procon04/.rbenv/versions/2.3.1/include  $(DEFS) $(cppflags) "-DNOKOGIRI_LIBXML2_PATH=\"/home/procon04/work/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxml2/2.9.4\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/home/procon04/work/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxslt/1.1.29\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""
+CXXFLAGS = $(CCDLFLAGS) $(cxxflags) $(ARCH_FLAG)
+ldflags  = -L. -L/home/procon04/.rbenv/versions/2.3.1/lib  -fstack-protector -rdynamic -Wl,-export-dynamic
+=======
 CPPFLAGS = -DHAVE_XMLPARSEDOC -DHAVE_XSLTPARSESTYLESHEETDOC -DHAVE_EXSLTFUNCREGISTER -DHAVE_XMLHASFEATURE -DHAVE_XMLFIRSTELEMENTCHILD -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETPARSERSTRUCTUREDERRORS -I/home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/include -I/home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2 -I/home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2 -I/home/procon/.rbenv/versions/2.3.1/include  $(DEFS) $(cppflags) "-DNOKOGIRI_LIBXML2_PATH=\"/home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxml2/2.9.4\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxslt/1.1.29\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""
 CXXFLAGS = $(CCDLFLAGS) $(cxxflags) $(ARCH_FLAG)
 ldflags  = -L. -L/home/procon/.rbenv/versions/2.3.1/lib  -fstack-protector -rdynamic -Wl,-export-dynamic
+>>>>>>> 8b90bb1d5b15edd7e4fb1e1d8785c142fcb30872
 dldflags =  
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
@@ -122,8 +142,13 @@ TOUCH = exit >
 
 preload = 
 
+<<<<<<< HEAD
+libpath = . $(libdir) /home/procon04/work/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib /home/procon04/work/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib
+LIBPATH =  -L. -L$(libdir) -Wl,-R$(libdir) -L/home/procon04/work/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -Wl,-R/home/procon04/work/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -L/home/procon04/work/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -Wl,-R/home/procon04/work/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib
+=======
 libpath = . $(libdir) /home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib /home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib
 LIBPATH =  -L. -L$(libdir) -Wl,-R$(libdir) -L/home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -Wl,-R/home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -L/home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -Wl,-R/home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib
+>>>>>>> 8b90bb1d5b15edd7e4fb1e1d8785c142fcb30872
 DEFFILE = 
 
 CLEANFILES = mkmf.log
@@ -134,11 +159,19 @@ extout =
 extout_prefix = 
 target_prefix = /nokogiri
 LOCAL_LIBS = 
+<<<<<<< HEAD
+LIBS =  /home/procon04/work/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lm -ldl -lz /home/procon04/work/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/procon04/work/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/procon04/work/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -lpthread -lgmp -ldl -lcrypt -lm   -lc 
+ORIG_SRCS = xml_sax_parser.c xml_attr.c xml_entity_reference.c xml_node.c xml_namespace.c xml_element_decl.c html_sax_push_parser.c html_document.c nokogiri.c xml_text.c xml_libxml2_hacks.c xslt_stylesheet.c xml_reader.c xml_node_set.c xml_xpath_context.c xml_document.c html_entity_lookup.c xml_sax_push_parser.c xml_schema.c xml_attribute_decl.c xml_relax_ng.c xml_processing_instruction.c xml_io.c html_sax_parser_context.c xml_sax_parser_context.c xml_entity_decl.c xml_encoding_handler.c xml_document_fragment.c xml_comment.c html_element_description.c xml_dtd.c xml_cdata.c xml_syntax_error.c xml_element_content.c
+SRCS = $(ORIG_SRCS) 
+OBJS = xml_sax_parser.o xml_attr.o xml_entity_reference.o xml_node.o xml_namespace.o xml_element_decl.o html_sax_push_parser.o html_document.o nokogiri.o xml_text.o xml_libxml2_hacks.o xslt_stylesheet.o xml_reader.o xml_node_set.o xml_xpath_context.o xml_document.o html_entity_lookup.o xml_sax_push_parser.o xml_schema.o xml_attribute_decl.o xml_relax_ng.o xml_processing_instruction.o xml_io.o html_sax_parser_context.o xml_sax_parser_context.o xml_entity_decl.o xml_encoding_handler.o xml_document_fragment.o xml_comment.o html_element_description.o xml_dtd.o xml_cdata.o xml_syntax_error.o xml_element_content.o
+HDRS = $(srcdir)/html_document.h $(srcdir)/xml_sax_parser_context.h $(srcdir)/xml_schema.h $(srcdir)/xml_reader.h $(srcdir)/xml_attribute_decl.h $(srcdir)/xml_entity_decl.h $(srcdir)/xml_element_decl.h $(srcdir)/xml_syntax_error.h $(srcdir)/xml_document.h $(srcdir)/xml_document_fragment.h $(srcdir)/html_element_description.h $(srcdir)/xml_io.h $(srcdir)/html_entity_lookup.h $(srcdir)/xml_dtd.h $(srcdir)/xml_sax_push_parser.h $(srcdir)/html_sax_push_parser.h $(srcdir)/nokogiri.h $(srcdir)/xml_attr.h $(srcdir)/xml_cdata.h $(srcdir)/xml_entity_reference.h $(srcdir)/xml_encoding_handler.h $(srcdir)/xslt_stylesheet.h $(srcdir)/xml_processing_instruction.h $(srcdir)/xml_comment.h $(srcdir)/xml_element_content.h $(srcdir)/xml_libxml2_hacks.h $(srcdir)/xml_xpath_context.h $(srcdir)/xml_node_set.h $(srcdir)/xml_node.h $(srcdir)/xml_relax_ng.h $(srcdir)/xml_namespace.h $(srcdir)/xml_text.h $(srcdir)/xml_sax_parser.h $(srcdir)/html_sax_parser_context.h
+=======
 LIBS =  /home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lm -ldl -lz /home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/procon/rails_app/newstyle/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -lpthread -lgmp -ldl -lcrypt -lm   -lc 
 ORIG_SRCS = xml_schema.c html_document.c xml_reader.c xml_processing_instruction.c xml_document.c xml_namespace.c xml_cdata.c xml_node.c xml_dtd.c xml_sax_parser_context.c xml_attr.c xml_document_fragment.c xml_sax_push_parser.c xml_sax_parser.c xml_encoding_handler.c xml_text.c xml_attribute_decl.c html_element_description.c xml_node_set.c xml_element_content.c xml_libxml2_hacks.c xml_relax_ng.c html_sax_parser_context.c xml_comment.c xml_element_decl.c xslt_stylesheet.c xml_entity_reference.c html_entity_lookup.c nokogiri.c xml_io.c html_sax_push_parser.c xml_entity_decl.c xml_syntax_error.c xml_xpath_context.c
 SRCS = $(ORIG_SRCS) 
 OBJS = xml_schema.o html_document.o xml_reader.o xml_processing_instruction.o xml_document.o xml_namespace.o xml_cdata.o xml_node.o xml_dtd.o xml_sax_parser_context.o xml_attr.o xml_document_fragment.o xml_sax_push_parser.o xml_sax_parser.o xml_encoding_handler.o xml_text.o xml_attribute_decl.o html_element_description.o xml_node_set.o xml_element_content.o xml_libxml2_hacks.o xml_relax_ng.o html_sax_parser_context.o xml_comment.o xml_element_decl.o xslt_stylesheet.o xml_entity_reference.o html_entity_lookup.o nokogiri.o xml_io.o html_sax_push_parser.o xml_entity_decl.o xml_syntax_error.o xml_xpath_context.o
 HDRS = $(srcdir)/html_sax_push_parser.h $(srcdir)/xml_sax_push_parser.h $(srcdir)/xml_libxml2_hacks.h $(srcdir)/xml_cdata.h $(srcdir)/xml_text.h $(srcdir)/xml_schema.h $(srcdir)/xml_xpath_context.h $(srcdir)/xml_element_content.h $(srcdir)/xml_document_fragment.h $(srcdir)/xml_sax_parser_context.h $(srcdir)/xml_entity_reference.h $(srcdir)/html_sax_parser_context.h $(srcdir)/xml_processing_instruction.h $(srcdir)/xml_dtd.h $(srcdir)/html_entity_lookup.h $(srcdir)/nokogiri.h $(srcdir)/xml_sax_parser.h $(srcdir)/xml_attr.h $(srcdir)/xml_document.h $(srcdir)/xml_namespace.h $(srcdir)/xml_io.h $(srcdir)/xml_comment.h $(srcdir)/xml_attribute_decl.h $(srcdir)/xml_node_set.h $(srcdir)/xml_encoding_handler.h $(srcdir)/xml_node.h $(srcdir)/html_document.h $(srcdir)/html_element_description.h $(srcdir)/xml_syntax_error.h $(srcdir)/xslt_stylesheet.h $(srcdir)/xml_reader.h $(srcdir)/xml_element_decl.h $(srcdir)/xml_relax_ng.h $(srcdir)/xml_entity_decl.h
+>>>>>>> 8b90bb1d5b15edd7e4fb1e1d8785c142fcb30872
 TARGET = nokogiri
 TARGET_NAME = nokogiri
 TARGET_ENTRY = Init_$(TARGET_NAME)

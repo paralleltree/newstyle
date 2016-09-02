@@ -12,12 +12,21 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
+<<<<<<< HEAD
+topdir = /home/procon04/.rbenv/versions/2.3.1/include/ruby-2.3.0
+hdrdir = $(topdir)
+arch_hdrdir = /home/procon04/.rbenv/versions/2.3.1/include/ruby-2.3.0/x86_64-linux
+PATH_SEPARATOR = :
+VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
+prefix = $(DESTDIR)/home/procon04/.rbenv/versions/2.3.1
+=======
 topdir = /home/procon/.rbenv/versions/2.3.1/include/ruby-2.3.0
 hdrdir = $(topdir)
 arch_hdrdir = /home/procon/.rbenv/versions/2.3.1/include/ruby-2.3.0/x86_64-linux
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
 prefix = $(DESTDIR)/home/procon/.rbenv/versions/2.3.1
+>>>>>>> 8b90bb1d5b15edd7e4fb1e1d8785c142fcb30872
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -31,8 +40,13 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
+<<<<<<< HEAD
+sitearchdir = $(DESTDIR)./.gem.20160901-27565-qt9qrq
+sitelibdir = $(DESTDIR)./.gem.20160901-27565-qt9qrq
+=======
 sitearchdir = $(DESTDIR)./.gem.20160901-29918-13sz3zz
 sitelibdir = $(DESTDIR)./.gem.20160901-29918-13sz3zz
+>>>>>>> 8b90bb1d5b15edd7e4fb1e1d8785c142fcb30872
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -83,9 +97,15 @@ CCDLFLAGS = -fPIC
 CFLAGS   = $(CCDLFLAGS) $(cflags) $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
+<<<<<<< HEAD
+CPPFLAGS = -DHAVE_RB_PROC_ARITY -DHAVE_RB_INTEGER_PACK -DHAVE_SQLITE3_INITIALIZE -DHAVE_SQLITE3_BACKUP_INIT -DHAVE_SQLITE3_COLUMN_DATABASE_NAME -DHAVE_SQLITE3_ENABLE_LOAD_EXTENSION -DHAVE_SQLITE3_LOAD_EXTENSION -DHAVE_SQLITE3_OPEN_V2 -DHAVE_SQLITE3_PREPARE_V2 -DHAVE_TYPE_SQLITE3_INT64 -DHAVE_TYPE_SQLITE3_UINT64 -I/home/procon04/.rbenv/versions/2.3.1/include  $(DEFS) $(cppflags)
+CXXFLAGS = $(CCDLFLAGS) $(cxxflags) $(ARCH_FLAG)
+ldflags  = -L. -L/home/procon04/.rbenv/versions/2.3.1/lib  -fstack-protector -rdynamic -Wl,-export-dynamic
+=======
 CPPFLAGS = -DHAVE_RB_PROC_ARITY -DHAVE_RB_INTEGER_PACK -DHAVE_SQLITE3_INITIALIZE -DHAVE_SQLITE3_BACKUP_INIT -DHAVE_SQLITE3_COLUMN_DATABASE_NAME -DHAVE_SQLITE3_ENABLE_LOAD_EXTENSION -DHAVE_SQLITE3_LOAD_EXTENSION -DHAVE_SQLITE3_OPEN_V2 -DHAVE_SQLITE3_PREPARE_V2 -DHAVE_TYPE_SQLITE3_INT64 -DHAVE_TYPE_SQLITE3_UINT64 -I/home/procon/.rbenv/versions/2.3.1/include  $(DEFS) $(cppflags)
 CXXFLAGS = $(CCDLFLAGS) $(cxxflags) $(ARCH_FLAG)
 ldflags  = -L. -L/home/procon/.rbenv/versions/2.3.1/lib  -fstack-protector -rdynamic -Wl,-export-dynamic
+>>>>>>> 8b90bb1d5b15edd7e4fb1e1d8785c142fcb30872
 dldflags =  
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
@@ -135,10 +155,17 @@ extout_prefix =
 target_prefix = /sqlite3
 LOCAL_LIBS = 
 LIBS =  -lsqlite3  -lpthread -lgmp -ldl -lcrypt -lm   -lc
+<<<<<<< HEAD
+ORIG_SRCS = statement.c sqlite3.c database.c backup.c exception.c
+SRCS = $(ORIG_SRCS) 
+OBJS = statement.o sqlite3.o database.o backup.o exception.o
+HDRS = $(srcdir)/exception.h $(srcdir)/sqlite3_ruby.h $(srcdir)/statement.h $(srcdir)/backup.h $(srcdir)/database.h
+=======
 ORIG_SRCS = backup.c statement.c database.c sqlite3.c exception.c
 SRCS = $(ORIG_SRCS) 
 OBJS = backup.o statement.o database.o sqlite3.o exception.o
 HDRS = $(srcdir)/exception.h $(srcdir)/database.h $(srcdir)/sqlite3_ruby.h $(srcdir)/statement.h $(srcdir)/backup.h
+>>>>>>> 8b90bb1d5b15edd7e4fb1e1d8785c142fcb30872
 TARGET = sqlite3_native
 TARGET_NAME = sqlite3_native
 TARGET_ENTRY = Init_$(TARGET_NAME)

@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Content.create(title: 'test news',url: 'http://www.example.com',summary: 'summary_text',body: 'body_text',keyword: "key_text",trend: 'news',time: '1000-01-01 00:00:00',author: 'NIT,Oyama')
